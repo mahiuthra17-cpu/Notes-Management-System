@@ -1,0 +1,27 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/notes")
+@CrossOrigin("*")
+public class NoteController {
+
+    @Autowired
+    private NoteService service;
+
+    @GetMapping
+    public List<Note> getAll(){
+        return service.getAll();
+    }
+
+    @PostMapping
+    public Note save(@RequestBody Note note){
+        return service.save(note);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id){
+        service.delete(id);
+    }
+}
