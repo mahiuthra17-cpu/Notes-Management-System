@@ -1,0 +1,21 @@
+body{
+font-family:Arial;
+margin:40px;
+}
+
+input,textarea{
+width:300px;
+display:block;
+margin:10px 0;
+padding:10px;
+}
+
+button{
+padding:10px 20px;
+}
+
+.note{
+border:1px solid black;
+padding:10px;
+margin:10px;
+}
